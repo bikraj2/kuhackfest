@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pixel/screens/buyer/b_profile.dart';
 import 'package:pixel/screens/seller/s_signup.dart';
 import 'package:pixel/screens/widgets/header_widget.dart';
 import 'package:pixel/screens/widgets/theme_helper.dart';
@@ -60,30 +61,33 @@ class _SLoginState extends State<SLogin> {
                             padding: EdgeInsets.fromLTRB(40, 10, 40, 10),
                             child: Text('Login'),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const BProfile()),
+                            );
+                          },
                         )),
                         Container(
-                          margin: EdgeInsets.fromLTRB(10,20,10,20),
-                          child: Text.rich(
-                            TextSpan(
-                                  children: [
-                                    TextSpan(text: "Don\'t have an account? "),
-                                    TextSpan(
-                                      text: 'Create',
-                                      recognizer: TapGestureRecognizer()
-                                        ..onTap = (){
-                                          Navigator.push(context, MaterialPageRoute(builder: (context) => SSignup()));
-                                        },
-                                        style: TextStyle(fontWeight: FontWeight.bold),
-                                    ),
-                                  ]
-                            )
-                          )
-                        ),
+                            margin: EdgeInsets.fromLTRB(10, 20, 10, 20),
+                            child: Text.rich(TextSpan(children: [
+                              TextSpan(text: "Don\'t have an account? "),
+                              TextSpan(
+                                text: 'Create',
+                                recognizer: TapGestureRecognizer()
+                                  ..onTap = () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => SSignup()));
+                                  },
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                            ]))),
                         SizedBox(
                           height: 20,
                         ),
-                        
                       ],
                     ))
               ]),

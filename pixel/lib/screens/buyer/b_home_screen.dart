@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pixel/screens/get_started_screen.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -20,8 +21,9 @@ class _BHomeScreenState extends State<BHomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.pink,
+        backgroundColor: Colors.orange,
         title: const Text('Dashboard'),
+
         // ignore: prefer_const_literals_to_create_immutables
         actions: [
           const IconButton(
@@ -32,6 +34,14 @@ class _BHomeScreenState extends State<BHomeScreen> {
               color: Colors.white)
         ],
       ),
+      body: ElevatedButton(
+          onPressed: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const GetStartedScreen()));
+          },
+          child: const Text('back')),
       drawer: Drawer(
           child: ListView(
         children: const [
