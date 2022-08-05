@@ -11,9 +11,11 @@ class SSignup2 extends StatefulWidget {
 
 class _SSignup2State extends State<SSignup2> {
   final Key _formKey = GlobalKey<FormState>();
+  var initialtype='Citizenship';
   List <String> identitytype=[
     'Citizenship','Passport','National ID card'
   ];
+  
 
   @override
   Widget build(BuildContext context) {
@@ -67,8 +69,13 @@ class _SSignup2State extends State<SSignup2> {
                             ),
                             // Container(
                             //   child: DropdownButton(
-                            //     onChanged: (value) {} ),
-                            //     value: identitytype.first,
+                            //     onChanged: (value) {
+                            //       initialtype = value.toString();
+                            //       setState(() {
+                                    
+                            //       });
+                            //     } ,
+                            //     value: initialtype,
                             //     items: identitytype.map((items){
                             //       return DropdownMenuItem(
                             //         value: items,
@@ -80,7 +87,7 @@ class _SSignup2State extends State<SSignup2> {
                             Container(
                               child: TextFormField(
                                 decoration: ThemeHelper().textInputDecoration(
-                                    'First Name', 'Enter your first name'),
+                                    'Citizenship number', 'Enter your citizenship number'),
                               ),
                             ),
                             SizedBox(
@@ -89,7 +96,7 @@ class _SSignup2State extends State<SSignup2> {
                             Container(
                               child: TextFormField(
                                 decoration: ThemeHelper().textInputDecoration(
-                                    'Middle Name', 'Enter your middle name'),
+                                    'Issue Date', 'Enter your Citizenship issue date'),
                               ),
                             ),
                             SizedBox(
@@ -98,54 +105,19 @@ class _SSignup2State extends State<SSignup2> {
                             Container(
                               child: TextFormField(
                                 decoration: ThemeHelper().textInputDecoration(
-                                    'Last Name', 'Enter your last name'),
+                                    'Issue District', 'Enter your Citizenship issue district'),
                               ),
                             ),
                             SizedBox(
                               height: 10,
                             ),
-                            Container(
-                              child: TextFormField(
-                                decoration: ThemeHelper().textInputDecoration(
-                                    'Email', 'Enter your email'),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Container(
-                              child: TextFormField(
-                                decoration: ThemeHelper().textInputDecoration(
-                                    'Phone', 'Enter your phone number'),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Container(
-                              child: TextFormField(
-                                decoration: ThemeHelper().textInputDecoration(
-                                    'User Name', 'Enter your user name'),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Container(
-                              child: TextFormField(
-                                decoration: ThemeHelper().textInputDecoration(
-                                    'Password', 'Enter your password'),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
+                           
 
                             Container(
                               child: ElevatedButton(
                                 child: const Padding(
                                   padding: EdgeInsets.fromLTRB(40, 10, 40, 10),
-                                  child: Text('Next -> from2'),
+                                  child: Text('Register'),
                                 ),
                                 onPressed: () {},
                             )),

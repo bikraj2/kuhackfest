@@ -12,8 +12,10 @@ class GetStartedScreen extends StatelessWidget {
     return Scaffold(
         body: Center(
       child: Row(
+         
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
+          
           Container(
                     child: ElevatedButton(
                       child: const Padding(
@@ -28,8 +30,7 @@ class GetStartedScreen extends StatelessWidget {
                         padding: EdgeInsets.fromLTRB(40, 10, 40, 10),
                         child: Text('Seller'),
                       ),
-                      onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => SLogin()));
-},
+                      onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => SLogin()));},
                             )),
 
           // ElevatedButton( 
