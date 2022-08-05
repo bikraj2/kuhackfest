@@ -2,15 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:pixel/screens/widgets/header_widget.dart';
 import 'package:pixel/screens/widgets/theme_helper.dart';
 
-class BSignup extends StatefulWidget {
-  const BSignup({Key? key}) : super(key: key);
+class SSignup2 extends StatefulWidget {
+  const SSignup2({Key? key}) : super(key: key);
 
   @override
-  State<BSignup> createState() => _BSignupState();
+  State<SSignup2> createState() => _SSignup2State();
 }
 
-class _BSignupState extends State<BSignup> {
+class _SSignup2State extends State<SSignup2> {
   final Key _formKey = GlobalKey<FormState>();
+  List <String> identitytype=[
+    'Citizenship','Passport','National ID card'
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -62,6 +65,18 @@ class _BSignupState extends State<BSignup> {
                             SizedBox(
                               height: 10,
                             ),
+                            // Container(
+                            //   child: DropdownButton(
+                            //     onChanged: (value) {} ),
+                            //     value: identitytype.first,
+                            //     items: identitytype.map((items){
+                            //       return DropdownMenuItem(
+                            //         value: items,
+                            //         child: Text(items));
+                            //     }).toList(), 
+                                
+                            //   ),
+                            // ),
                             Container(
                               child: TextFormField(
                                 decoration: ThemeHelper().textInputDecoration(
@@ -130,7 +145,7 @@ class _BSignupState extends State<BSignup> {
                               child: ElevatedButton(
                                 child: const Padding(
                                   padding: EdgeInsets.fromLTRB(40, 10, 40, 10),
-                                  child: Text('Register'),
+                                  child: Text('Next -> from2'),
                                 ),
                                 onPressed: () {},
                             )),

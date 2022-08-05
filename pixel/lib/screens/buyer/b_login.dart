@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:pixel/screens/buyer/b_signup.dart';
 import 'package:pixel/screens/widgets/header_widget.dart';
 import 'package:pixel/screens/widgets/theme_helper.dart';
+import 'package:flutter/gestures.dart';
 
 class BLogin extends StatefulWidget {
   const BLogin({Key? key}) : super(key: key);
@@ -60,10 +62,28 @@ class _BLoginState extends State<BLogin> {
                           ),
                           onPressed: () {},
                         )),
+                        Container(
+                          margin: EdgeInsets.fromLTRB(10,20,10,20),
+                          child: Text.rich(
+                            TextSpan(
+                                  children: [
+                                    TextSpan(text: "Don\'t have an account? "),
+                                    TextSpan(
+                                      text: 'Create',
+                                      recognizer: TapGestureRecognizer()
+                                        ..onTap = (){
+                                          Navigator.push(context, MaterialPageRoute(builder: (context) => BSignup()));
+                                        },
+                                        style: TextStyle(fontWeight: FontWeight.bold),
+                                    ),
+                                  ]
+                            )
+                          )
+                        ),
                         SizedBox(
                           height: 20,
                         ),
-                        Text('Don\'t have account? Sign Up'),
+                        
                       ],
                     ))
               ]),
