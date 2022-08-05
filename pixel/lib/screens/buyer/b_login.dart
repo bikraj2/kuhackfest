@@ -53,21 +53,17 @@ class _BLoginState extends State<BLogin> {
                           height: 20,
                         ),
                         Container(
-                            decoration:
-                                ThemeHelper().buttonBoxDecoration(context),
                             child: ElevatedButton(
-                              child: Padding(
-                                padding: EdgeInsets.fromLTRB(40, 10, 40, 10),
-                                child: Text('Login'),
-                              ),
-                              onPressed: () {},
-                            )),
+                          child: const Padding(
+                            padding: EdgeInsets.fromLTRB(40, 10, 40, 10),
+                            child: Text('Login'),
+                          ),
+                          onPressed: () {},
+                        )),
                         SizedBox(
                           height: 20,
                         ),
-                        Container(
-                          child: Text('Don\'t have account? Sign Up'),
-                        ),
+                        Text('Don\'t have account? Sign Up'),
                       ],
                     ))
               ]),
