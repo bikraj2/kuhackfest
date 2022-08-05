@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 
 class BProfile extends StatefulWidget {
   const BProfile({Key? key}) : super(key: key);
