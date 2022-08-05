@@ -21,16 +21,16 @@ class _BProfileState extends State<BProfile> {
         ),
         elevation: 0.5,
         iconTheme: const IconThemeData(color: Colors.white),
-        flexibleSpace: Container(
-          decoration: BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                  colors: <Color>[
-                Theme.of(context).primaryColor,
-                Theme.of(context).colorScheme.secondary
-              ])),
-        ),
+        // flexibleSpace: Container(
+        //   decoration: BoxDecoration(
+        //       gradient: LinearGradient(
+        //           begin: Alignment.topLeft,
+        //           end: Alignment.bottomRight,
+        //           colors: <Color>[
+        //         Theme.of(context).primaryColor,
+        //         Theme.of(context).colorScheme.secondary
+        //       ])),
+        // ),
         actions: [
           Container(
             margin: const EdgeInsets.only(
@@ -67,17 +67,17 @@ class _BProfileState extends State<BProfile> {
       ),
       drawer: Drawer(
         child: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 gradient: LinearGradient(
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
-                    stops: const [
+                    stops: [
                   0.0,
                   1.0
                 ],
                     colors: [
-                  Theme.of(context).primaryColor.withOpacity(0.2),
-                  Theme.of(context).colorScheme.secondary.withOpacity(0.5),
+                  Colors.white,
+                  Colors.white,
                 ])),
             child: ListView(children: [
               DrawerHeader(
@@ -108,13 +108,13 @@ class _BProfileState extends State<BProfile> {
                 leading: Icon(
                   Icons.account_box_rounded,
                   size: _drawerIconSize,
-                  color: Theme.of(context).colorScheme.secondary,
+                  color: Colors.black,
                 ),
                 title: Text(
                   'Personal Information',
                   style: TextStyle(
                       fontSize: 17,
-                      color: Theme.of(context).colorScheme.secondary),
+                      color: Theme.of(context).colorScheme.primary),
                 ),
                 onTap: () {
                   // Navigator.push(context, MaterialPageRoute(builder: (context) => SplashScreen(title: "Splash Screen")));
@@ -122,13 +122,12 @@ class _BProfileState extends State<BProfile> {
               ),
               ListTile(
                 leading: Icon(Icons.add_home_work_rounded,
-                    size: _drawerIconSize,
-                    color: Theme.of(context).colorScheme.secondary),
+                    size: _drawerIconSize, color: Colors.black),
                 title: Text(
                   ' Address',
                   style: TextStyle(
                       fontSize: _drawerFontSize,
-                      color: Theme.of(context).colorScheme.secondary),
+                      color: Theme.of(context).colorScheme.primary),
                 ),
                 onTap: () {
                   // Navigator.push(
@@ -143,13 +142,12 @@ class _BProfileState extends State<BProfile> {
               ),
               ListTile(
                 leading: Icon(Icons.document_scanner_rounded,
-                    size: _drawerIconSize,
-                    color: Theme.of(context).colorScheme.secondary),
+                    size: _drawerIconSize, color: Colors.black),
                 title: Text(
                   'Documents',
                   style: TextStyle(
                       fontSize: _drawerFontSize,
-                      color: Theme.of(context).colorScheme.secondary),
+                      color: Theme.of(context).colorScheme.primary),
                 ),
                 onTap: () {
                   // Navigator.push(
@@ -166,13 +164,13 @@ class _BProfileState extends State<BProfile> {
                 leading: Icon(
                   Icons.card_travel_rounded,
                   size: _drawerIconSize,
-                  color: Theme.of(context).colorScheme.secondary,
+                  color: Colors.black,
                 ),
                 title: Text(
                   'My Cart',
                   style: TextStyle(
                       fontSize: _drawerFontSize,
-                      color: Theme.of(context).colorScheme.secondary),
+                      color: Theme.of(context).colorScheme.primary),
                 ),
                 onTap: () {
                   // Navigator.push( context, MaterialPageRoute(builder: (context) => ForgotPasswordPage()),);
@@ -186,13 +184,13 @@ class _BProfileState extends State<BProfile> {
                 leading: Icon(
                   Icons.help_center_rounded,
                   size: _drawerIconSize,
-                  color: Theme.of(context).colorScheme.secondary,
+                  color: Colors.black,
                 ),
                 title: Text(
                   'Help',
                   style: TextStyle(
                       fontSize: _drawerFontSize,
-                      color: Theme.of(context).colorScheme.secondary),
+                      color: Theme.of(context).colorScheme.primary),
                 ),
                 onTap: () {
                   // Navigator.push(
@@ -210,13 +208,13 @@ class _BProfileState extends State<BProfile> {
                 leading: Icon(
                   Icons.logout_rounded,
                   size: _drawerIconSize,
-                  color: Theme.of(context).colorScheme.secondary,
+                  color: Colors.black,
                 ),
                 title: Text(
                   'Logout',
                   style: TextStyle(
                       fontSize: _drawerFontSize,
-                      color: Theme.of(context).colorScheme.secondary),
+                      color: Theme.of(context).colorScheme.primary),
                 ),
                 onTap: () {
                   // SystemNavigator.pop();

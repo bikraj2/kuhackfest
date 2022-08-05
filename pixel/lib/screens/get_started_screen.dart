@@ -12,7 +12,9 @@ class GetStartedScreen extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          ElevatedButton(onPressed: () {}, child: const Text('Buyer')),
+          ElevatedButton(onPressed: () {
+            
+          }, child: const Text('Buyer')),
           const SizedBox(
             width: 20,
           ),
