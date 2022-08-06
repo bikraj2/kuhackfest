@@ -1,29 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:pixel/screens/get_started_screen.dart';
+import 'package:pixel/screens/seller/s_customers.dart';
+import 'package:pixel/screens/seller/s_home_screen.dart';
 import 'package:circle_nav_bar/circle_nav_bar.dart';
 
-void main() {
-  runApp(const MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: BHomeScreen(),
-  ));
-}
-
-class BHomeScreen extends StatefulWidget {
-  const BHomeScreen({Key? key}) : super(key: key);
+class SProduct extends StatefulWidget {
+  const SProduct({Key? key}) : super(key: key);
 
   @override
-  // ignore: library_private_types_in_public_api
-  _BHomeScreenState createState() => _BHomeScreenState();
+  State<SProduct> createState() => _SProductState();
 }
 
-class _BHomeScreenState extends State<BHomeScreen> {
+class _SProductState extends State<SProduct> {
+  int _currentIndex=2;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.orange,
-        title: const Text('Dashboard'),
+        title: const Text('Your Products'),
 
         // ignore: prefer_const_literals_to_create_immutables
         actions: [
@@ -39,28 +33,23 @@ class _BHomeScreenState extends State<BHomeScreen> {
           )
         ],
       ),
-      body: ElevatedButton(
-          onPressed: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const GetStartedScreen()));
-          },
-          child: const Text('back')),
-      drawer: Drawer(
-          child: ListView(
-        children: const [
-          UserAccountsDrawerHeader(
-              accountName: Text('Priyanshu Sharma'),
-              accountEmail: Text('psneb420@gmail.com'))
-        ],
-      )),
+      
+      // drawer: Drawer(
+      //     child: ListView(
+      //   children: const [
+      //     UserAccountsDrawerHeader(
+      //         accountName: Text('Priyanshu Sharma'),
+      //         accountEmail: Text('psneb420@gmail.com'))
+      //   ],
+      // )),
       bottomNavigationBar: CircleNavBar(
+        
         activeIcons: const [
           Icon(Icons.people_alt_outlined, color: Colors.orange),
           Icon(Icons.dashboard_outlined, color: Colors.orange),
           Icon(Icons.inventory_2_outlined, color: Colors.orange),
         ],
+        
         inactiveIcons: const [
           Text(
             "Customers",
@@ -78,9 +67,39 @@ class _BHomeScreenState extends State<BHomeScreen> {
         color: Colors.white,
         height: 60,
         circleWidth: 60,
-        initIndex: 1,
-        onChanged: (v) {
+        initIndex: _currentIndex,
+      
+        onChanged: (index) {
           // TODO
+          setState(() {
+            _currentIndex = index;
+            switch(index){
+              case 0:{
+                 Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SCustomers() ));
+              }
+              break;
+              case 1:{
+                 Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SHomeScreen()));
+
+              }
+              break;
+              case 2:{
+                 Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SProduct()));
+                
+              }
+              break;
+            }
+            
+          });
         },
         // tabCurve: ,
         padding: const EdgeInsets.only(left: 16, right: 16, bottom: 20),
@@ -94,5 +113,6 @@ class _BHomeScreenState extends State<BHomeScreen> {
         elevation: 10,
       ),
     );
+    
   }
 }
