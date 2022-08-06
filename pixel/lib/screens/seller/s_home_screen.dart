@@ -57,7 +57,7 @@ class _SHomeScreenState extends State<SHomeScreen> {
       )),
       bottomNavigationBar: CircleNavBar(
         activeIcons: const [
-          Icon(Icons.people_alt_outlined, color: Colors.orange),
+          Icon(Icons.home, color: Colors.orange),
           Icon(Icons.dashboard_outlined, color: Colors.orange),
           Icon(Icons.inventory_2_outlined, color: Colors.orange),
         ],

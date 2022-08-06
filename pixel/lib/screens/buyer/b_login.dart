@@ -89,7 +89,7 @@ class _BLoginState extends State<BLogin> {
                                 .login(usernameController.text,
                                     passwordController.text)
                                 .then((val) => {
-                                      if (val.data["success"])
+                                      if (val.data["success"]==true)
                                         {
                                           Navigator.push(
                                               context,

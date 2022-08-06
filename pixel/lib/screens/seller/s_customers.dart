@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:pixel/screens/seller/s_product.dart';
 import 'package:pixel/screens/seller/s_home_screen.dart';
 import 'package:circle_nav_bar/circle_nav_bar.dart';
-import 'package:google_fonts/google_fonts.dart';
+// import 'package:google_fonts/google_fonts.dart';
 
 class SCustomers extends StatefulWidget {
   const SCustomers({Key? key}) : super(key: key);

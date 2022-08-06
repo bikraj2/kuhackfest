@@ -149,7 +149,7 @@ class _BSignupState extends State<BSignup> {
                                             }
                                           else
                                             {
-                                              print(val.msg)
+                                              print(val.data.msg)
                                             }
                                         });
                               },
