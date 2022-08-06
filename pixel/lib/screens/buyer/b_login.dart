@@ -29,13 +29,13 @@ class BLogin extends StatefulWidget {
 class _BLoginState extends State<BLogin> {
   final double _headerHeight = 250;
   final Key _formKey = GlobalKey<FormState>();
-<<<<<<< HEAD
+
   TextEditingController usernameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
-=======
+
   String? username;
   String? password;
->>>>>>> 695c623e06f6282d1071a82799bb5f290952234a
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -85,23 +85,21 @@ class _BLoginState extends State<BLogin> {
                             child: Text('Login'),
                           ),
                           onPressed: () {
-<<<<<<< HEAD
                             AuthService()
                                 .login(usernameController.text,
                                     passwordController.text)
                                 .then((val) => {
-                                  if(val.data["success"]){
-                                    Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                      builder: (context) =>
-                                                          BHomeScreen()))
-                                  }
-                                  else{
-                                    print("not done")
-                                  }
-                                });
-=======
+                                      if (val.data["success"])
+                                        {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      BHomeScreen()))
+                                        }
+                                      else
+                                        {print("not done")}
+                                    });
                             // login(username, password).then((value) =>true)
                             // {
                             Navigator.push(
@@ -110,7 +108,6 @@ class _BLoginState extends State<BLogin> {
                                   builder: (context) => const BHomeScreen()),
                             );
                             // };
->>>>>>> 695c623e06f6282d1071a82799bb5f290952234a
                           },
                         )),
                         Container(
