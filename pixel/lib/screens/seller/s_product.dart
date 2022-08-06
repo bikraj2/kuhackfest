@@ -1,7 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pixel/screens/seller/s_customers.dart';
 import 'package:pixel/screens/seller/s_home_screen.dart';
 import 'package:circle_nav_bar/circle_nav_bar.dart';
+import 'package:animate_do/animate_do.dart';
 
 class SProduct extends StatefulWidget {
   const SProduct({Key? key}) : super(key: key);
@@ -112,7 +114,146 @@ class _SProductState extends State<SProduct> {
         shadowColor: Colors.deepOrange,
         elevation: 10,
       ),
-    );
+      body:SingleChildScrollView(
+        padding:EdgeInsets.all(15),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          getProductLists(),
+
+        ],
+      ),) 
+      
+      );
     
+  }
+  Widget getProductLists()
+  {
+    var size = MediaQuery.of(context).size;
+    return Column(
+      children: List.generate(productsjson.length, (index) {
+        return Padding(
+          padding: const EdgeInsets.only(bottom: 25),
+          child: FadeIn(
+             duration: Duration(milliseconds: 1000 * index),
+            child: Row(
+              children: [
+                Container(
+                  width: (size.width - 30) * 0.7,
+                  height: 80,
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 70,
+                        height: 70,
+                        child: Stack(
+                          children: [
+                            Container(
+                              width: 60,
+                              height: 60,
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image:
+                                          AssetImage(productsjson[index]['image']),
+                                      fit: BoxFit.cover)),
+                            ),
+                            // Positioned(
+                            //   top: 10,
+                            //   child: Container(
+                            //     width: 60,
+                            //     height: 60,
+                            //     decoration: BoxDecoration(
+                            //         borderRadius: BorderRadius.circular(5),
+                            //         border: Border.all(
+                            //             color: secondary.withOpacity(0.02)),
+                            //         color: secondary.withOpacity(0.1)),
+                            //   ),
+                            // )
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Flexible(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              productsjson[index]['name'],
+                              style: TextStyle(fontSize: 16),
+                              maxLines: 2,
+                            ),
+                            Row(
+                              children: [
+                                Text(
+                                  "Rs.",
+                                  style: TextStyle(
+                                      color: Colors.red,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                                Text(
+                                  productsjson[index]['price'],
+                                  style: TextStyle(
+                                      fontSize: 16, fontWeight: FontWeight.w600),
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  width: 15,
+                ),
+                Flexible(
+                  child: Container(
+                    height: 80,
+                    decoration: BoxDecoration(
+                        // color: secondary
+                        ),
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 5, bottom: 5),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Align(
+                              alignment: Alignment.topRight,
+                              child: Icon(
+                                Icons.close,
+                                size: 15,
+                              )),
+                          // Row(
+                          //   mainAxisAlignment: MainAxisAlignment.end,
+                          //   children: [
+                          //     Icon(LineIcons.minusSquare),
+                          //     SizedBox(
+                          //       width: 10,
+                          //     ),
+                          //     Text(
+                          //       "01",
+                          //       style: TextStyle(fontSize: 14),
+                          //     ),
+                          //     SizedBox(
+                          //       width: 10,
+                          //     ),
+                          //     Icon(LineIcons.plusSquare)
+                          //   ],
+                          // )
+                        ],
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            ),
+          ),
+        );
+      }),
+    );
   }
 }
