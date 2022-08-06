@@ -1,7 +1,13 @@
 
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:pixel/screens/get_started_screen.dart';
 import 'package:pixel/screens/seller/s_product.dart';
+=======
+import 'package:pixel/screens/buyer/b_profile.dart';
+import 'package:pixel/screens/get_started_screen.dart';
+//import 'package:pixel/screens/seller/s_product.dart';
+>>>>>>> 695c623e06f6282d1071a82799bb5f290952234a
 
 
 void main() {

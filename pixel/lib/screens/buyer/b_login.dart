@@ -6,6 +6,18 @@ import 'package:pixel/screens/widgets/header_widget.dart';
 import 'package:pixel/screens/widgets/theme_helper.dart';
 import 'package:flutter/gestures.dart';
 import 'b_profile.dart';
+// import 'package:dio/dio.dart';
+// Future<bool> login(String username,String password) async {
+//   try {
+//     var response = await Dio().post("",data: {
+//     "username":,
+//     "password":,
+//     });
+//     print(response);
+//   } catch (e) {
+//     print(e);
+//   }
+// }
 
 class BLogin extends StatefulWidget {
   const BLogin({Key? key}) : super(key: key);
@@ -17,8 +29,13 @@ class BLogin extends StatefulWidget {
 class _BLoginState extends State<BLogin> {
   final double _headerHeight = 250;
   final Key _formKey = GlobalKey<FormState>();
+<<<<<<< HEAD
   TextEditingController usernameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
+=======
+  String? username;
+  String? password;
+>>>>>>> 695c623e06f6282d1071a82799bb5f290952234a
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,12 +47,12 @@ class _BLoginState extends State<BLogin> {
                 child: HeaderWidget(_headerHeight, true, Icons.login_rounded)),
             SafeArea(
               child: Column(children: [
-                Text('LOGIN',
+                const Text('LOGIN',
                     style: TextStyle(
                       fontSize: 60,
                       fontWeight: FontWeight.bold,
                     )),
-                SizedBox(height: 30),
+                const SizedBox(height: 30),
                 Form(
                     key: _formKey,
                     child: Column(
@@ -68,6 +85,7 @@ class _BLoginState extends State<BLogin> {
                             child: Text('Login'),
                           ),
                           onPressed: () {
+<<<<<<< HEAD
                             AuthService()
                                 .login(usernameController.text,
                                     passwordController.text)
@@ -83,6 +101,16 @@ class _BLoginState extends State<BLogin> {
                                     print("not done")
                                   }
                                 });
+=======
+                            // login(username, password).then((value) =>true)
+                            // {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const BHomeScreen()),
+                            );
+                            // };
+>>>>>>> 695c623e06f6282d1071a82799bb5f290952234a
                           },
                         )),
                         Container(
