@@ -57,6 +57,7 @@ class _SCustomersState extends State<SCustomers> {
                         children: [
                           Column(
                             children: const [
+                              SizedBox(height: 50,),
                               Text('Priyanshu Sharma'),
                               Text('Dhapasi'),
                               Text('*****'),
@@ -65,7 +66,9 @@ class _SCustomersState extends State<SCustomers> {
                           const Padding(
                               padding: EdgeInsets.only(right: 15.0),
                               child: Image(
-                                image: AssetImage('assets/images/seller1.jpeg'),
+                                image: AssetImage('assets/images/priyanshu.jpeg'),
+                                height: 130,
+                                width: 130,
                               )),
                         ],
                       ),
@@ -82,6 +85,7 @@ class _SCustomersState extends State<SCustomers> {
                         children: [
                           Column(
                             children: const [
+                              SizedBox(height: 50,),
                               Text('Sadikshya Pokharel'),
                               Text('Baneshwor'),
                               Text('*****'),
@@ -90,7 +94,9 @@ class _SCustomersState extends State<SCustomers> {
                           const Padding(
                               padding: EdgeInsets.only(right: 15.0),
                               child: Image(
-                                image: AssetImage('assets/images/seller1.jpeg'),
+                                image: AssetImage('assets/images/sadikshya.jpg'),
+                                height: 130,
+                                width: 130,
                               )),
                         ],
                       ),
@@ -107,15 +113,18 @@ class _SCustomersState extends State<SCustomers> {
                         children: [
                           Column(
                             children: const [
+                              SizedBox(height: 50,),
                               Text('Ishan Panta'),
-                              Text('Dhapasi'),
+                              Text('Sanagaun'),
                               Text('*****'),
                             ],
                           ),
                           const Padding(
                               padding: EdgeInsets.only(right: 15.0),
                               child: Image(
-                                image: AssetImage('assets/images/seller1.jpeg'),
+                                image: AssetImage('assets/images/ishan.jpg'),
+                                height: 130,
+                                width: 130,
                               )),
                         ],
                       ),
@@ -133,15 +142,18 @@ class _SCustomersState extends State<SCustomers> {
                         children: [
                           Column(
                             children: const [
+                              SizedBox(height: 50,),
                               Text('Bikraj Shrestha'),
-                              Text('Dhapasi'),
+                              Text('Tikathali'),
                               Text('*****'),
                             ],
                           ),
                           const Padding(
                               padding: EdgeInsets.only(right: 15.0),
                               child: Image(
-                                image: AssetImage('assets/images/seller1.jpeg'),
+                                image: AssetImage('assets/images/bikraj.jpg'),
+                                height: 130,
+                                width: 130,
                               )),
                         ],
                       ),
@@ -158,6 +170,7 @@ class _SCustomersState extends State<SCustomers> {
                         children: [
                           Column(
                             children: const [
+                              SizedBox(height: 50,),
                               Text('Hackfest'),
                               Text('KU'),
                               Text('*****'),
@@ -166,7 +179,9 @@ class _SCustomersState extends State<SCustomers> {
                           const Padding(
                               padding: EdgeInsets.only(right: 15.0),
                               child: Image(
-                                image: AssetImage('assets/images/seller1.jpeg'),
+                                image: AssetImage('assets/images/hackfest.jpg'),
+                                height: 130,
+                                width: 130,
                               )),
                         ],
                       ),

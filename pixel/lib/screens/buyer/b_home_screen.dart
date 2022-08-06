@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pixel/screens/get_started_screen.dart';
 import 'package:circle_nav_bar/circle_nav_bar.dart';
+import 'package:pixel/screens/buyer/b_profile.dart';
+
 
 void main() {
   runApp(const MaterialApp(
@@ -33,28 +35,17 @@ class _BHomeScreenState extends State<BHomeScreen> {
                 Icons.search,
                 color: Colors.white,
               )),
-          const IconButton(
-            onPressed: null,
-            icon: Icon(Icons.shopping_cart, color: Colors.white),
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => BProfile()));
+            },
+            icon: Icon(Icons.account_box, color: Colors.white),
           )
         ],
       ),
-      body: ElevatedButton(
-          onPressed: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const GetStartedScreen()));
-          },
-          child: const Text('back')),
-      drawer: Drawer(
-          child: ListView(
-        children: const [
-          UserAccountsDrawerHeader(
-              accountName: Text('Priyanshu Sharma'),
-              accountEmail: Text('psneb420@gmail.com'))
-        ],
-      )),
+      
+     
       bottomNavigationBar: CircleNavBar(
         activeIcons: const [
           Icon(Icons.people_alt_outlined, color: Colors.orange),
