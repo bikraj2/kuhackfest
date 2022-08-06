@@ -29,27 +29,22 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-<<<<<<< HEAD
-  dio: ^4.0.6
-=======
+
   api_cache_manager: ^1.0.2
->>>>>>> 695c623e06f6282d1071a82799bb5f290952234a
+
 
   snippet_coder_utils: ^1.0.9
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
-<<<<<<< HEAD
+
   fluttertoast: ^8.0.9
-  google_fonts: any
-  circle_nav_bar: any
-=======
   circle_nav_bar: ^1.0.2
   dio: ^4.0.6
   google_fonts: ^3.0.1
 
->>>>>>> 695c623e06f6282d1071a82799bb5f290952234a
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
