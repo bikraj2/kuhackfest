@@ -1,34 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:pixel/screens/get_started_screen.dart';
-import 'package:circle_nav_bar/circle_nav_bar.dart';
 import 'package:pixel/screens/seller/s_product.dart';
-import 'package:pixel/screens/seller/s_customers.dart';
+import 'package:pixel/screens/seller/s_home_screen.dart';
+import 'package:circle_nav_bar/circle_nav_bar.dart';
 
-
-void main() {
-  runApp(const MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: SHomeScreen(),
-  ));
-}
-
-class SHomeScreen extends StatefulWidget {
-  const SHomeScreen({Key? key}) : super(key: key);
+class SCustomers extends StatefulWidget {
+  const SCustomers({Key? key}) : super(key: key);
 
   @override
-  // ignore: library_private_types_in_public_api
-  _SHomeScreenState createState() => _SHomeScreenState();
+  State<SCustomers> createState() => _SCustomersState();
 }
 
-class _SHomeScreenState extends State<SHomeScreen> {
-  int _currentIndex = 1;
-
+class _SCustomersState extends State<SCustomers> {
+    int _currentIndex=0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.orange,
-        title: const Text('Dashboard'),
+        title: const Text('Customers'),
 
         // ignore: prefer_const_literals_to_create_immutables
         actions: [
@@ -45,14 +34,14 @@ class _SHomeScreenState extends State<SHomeScreen> {
         ],
       ),
       
-      drawer: Drawer(
-          child: ListView(
-        children: const [
-          UserAccountsDrawerHeader(
-              accountName: Text('Priyanshu Sharma'),
-              accountEmail: Text('psneb420@gmail.com'))
-        ],
-      )),
+      // drawer: Drawer(
+      //     child: ListView(
+      //   children: const [
+      //     UserAccountsDrawerHeader(
+      //         accountName: Text('Priyanshu Sharma'),
+      //         accountEmail: Text('psneb420@gmail.com'))
+      //   ],
+      // )),
       bottomNavigationBar: CircleNavBar(
         
         activeIcons: const [
@@ -110,9 +99,6 @@ class _SHomeScreenState extends State<SHomeScreen> {
               break;
             }
             
-
-
-           
           });
         },
         // tabCurve: ,
@@ -127,5 +113,6 @@ class _SHomeScreenState extends State<SHomeScreen> {
         elevation: 10,
       ),
     );
+    
   }
-}
+  }

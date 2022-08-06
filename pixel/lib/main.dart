@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pixel/screens/get_started_screen.dart';
-import 'package:pixel/screens/seller/s_product.dart';
+//import 'package:pixel/screens/seller/s_product.dart';
 
 void main() {
   runApp(const MyApp());
