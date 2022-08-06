@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pixel/screens/buyer/b_profile.dart';
-import 'package:pixel/screens/get_started_screen.dart';
+import 'package:pixel/screens/seller/s_product.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.orange,
       ),
-      home: const GetStartedScreen(),
+      home: const SProduct(),
     );
   }
 }
