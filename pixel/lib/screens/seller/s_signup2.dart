@@ -2,15 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:pixel/screens/widgets/header_widget.dart';
 import 'package:pixel/screens/widgets/theme_helper.dart';
 
-class BSignup extends StatefulWidget {
-  const BSignup({Key? key}) : super(key: key);
+class SSignup2 extends StatefulWidget {
+  const SSignup2({Key? key}) : super(key: key);
 
   @override
-  State<BSignup> createState() => _BSignupState();
+  State<SSignup2> createState() => _SSignup2State();
 }
 
-class _BSignupState extends State<BSignup> {
+class _SSignup2State extends State<SSignup2> {
   final Key _formKey = GlobalKey<FormState>();
+  var initialtype='Citizenship';
+  List <String> identitytype=[
+    'Citizenship','Passport','National ID card'
+  ];
+  
 
   @override
   Widget build(BuildContext context) {
@@ -62,10 +67,27 @@ class _BSignupState extends State<BSignup> {
                             SizedBox(
                               height: 10,
                             ),
+                            // Container(
+                            //   child: DropdownButton(
+                            //     onChanged: (value) {
+                            //       initialtype = value.toString();
+                            //       setState(() {
+                                    
+                            //       });
+                            //     } ,
+                            //     value: initialtype,
+                            //     items: identitytype.map((items){
+                            //       return DropdownMenuItem(
+                            //         value: items,
+                            //         child: Text(items));
+                            //     }).toList(), 
+                                
+                            //   ),
+                            // ),
                             Container(
                               child: TextFormField(
                                 decoration: ThemeHelper().textInputDecoration(
-                                    'First Name', 'Enter your first name'),
+                                    'Citizenship number', 'Enter your citizenship number'),
                               ),
                             ),
                             SizedBox(
@@ -74,7 +96,7 @@ class _BSignupState extends State<BSignup> {
                             Container(
                               child: TextFormField(
                                 decoration: ThemeHelper().textInputDecoration(
-                                    'Middle Name', 'Enter your middle name'),
+                                    'Issue Date', 'Enter your Citizenship issue date'),
                               ),
                             ),
                             SizedBox(
@@ -83,48 +105,13 @@ class _BSignupState extends State<BSignup> {
                             Container(
                               child: TextFormField(
                                 decoration: ThemeHelper().textInputDecoration(
-                                    'Last Name', 'Enter your last name'),
+                                    'Issue District', 'Enter your Citizenship issue district'),
                               ),
                             ),
                             SizedBox(
                               height: 10,
                             ),
-                            Container(
-                              child: TextFormField(
-                                decoration: ThemeHelper().textInputDecoration(
-                                    'Email', 'Enter your email'),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Container(
-                              child: TextFormField(
-                                decoration: ThemeHelper().textInputDecoration(
-                                    'Phone', 'Enter your phone number'),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Container(
-                              child: TextFormField(
-                                decoration: ThemeHelper().textInputDecoration(
-                                    'User Name', 'Enter your user name'),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Container(
-                              child: TextFormField(
-                                decoration: ThemeHelper().textInputDecoration(
-                                    'Password', 'Enter your password'),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
+                           
 
                             Container(
                               child: ElevatedButton(
