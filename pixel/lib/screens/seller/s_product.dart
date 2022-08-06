@@ -13,6 +13,11 @@ class _SProductState extends State<SProduct> {
       appBar: AppBar(
         title: Text('Your Products'),
       ),
+      body: Column(
+        children: [
+          
+
+      ]),
     );
     
   }
