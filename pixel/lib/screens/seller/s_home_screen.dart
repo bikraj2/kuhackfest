@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:pixel/screens/buyer/b_profile.dart';
 import 'package:pixel/screens/get_started_screen.dart';
 import 'package:circle_nav_bar/circle_nav_bar.dart';
 import 'package:pixel/screens/seller/s_product.dart';
 import 'package:pixel/screens/seller/s_customers.dart';
-
 
 void main() {
   runApp(const MaterialApp(
@@ -38,13 +38,15 @@ class _SHomeScreenState extends State<SHomeScreen> {
                 Icons.search,
                 color: Colors.white,
               )),
-          const IconButton(
-            onPressed: null,
-            icon: Icon(Icons.shopping_cart, color: Colors.white),
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => BProfile()));
+            },
+            icon: Icon(Icons.account_box, color: Colors.white),
           )
         ],
       ),
-      
       drawer: Drawer(
           child: ListView(
         children: const [
@@ -54,13 +56,12 @@ class _SHomeScreenState extends State<SHomeScreen> {
         ],
       )),
       bottomNavigationBar: CircleNavBar(
-        
         activeIcons: const [
           Icon(Icons.people_alt_outlined, color: Colors.orange),
           Icon(Icons.dashboard_outlined, color: Colors.orange),
           Icon(Icons.inventory_2_outlined, color: Colors.orange),
         ],
-        
+
         inactiveIcons: const [
           Text(
             "Customers",
@@ -79,40 +80,31 @@ class _SHomeScreenState extends State<SHomeScreen> {
         height: 60,
         circleWidth: 60,
         initIndex: _currentIndex,
-      
+
         onChanged: (index) {
           // TODO
           setState(() {
             _currentIndex = index;
-            switch(index){
-              case 0:{
-                 Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => SCustomers() ));
-              }
-              break;
-              case 1:{
-                 Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => SHomeScreen()));
-
-              }
-              break;
-              case 2:{
-                 Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => SProduct()));
-                
-              }
-              break;
+            switch (index) {
+              case 0:
+                {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => SCustomers()));
+                }
+                break;
+              case 1:
+                {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => SHomeScreen()));
+                }
+                break;
+              case 2:
+                {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => SProduct()));
+                }
+                break;
             }
-            
-
-
-           
           });
         },
         // tabCurve: ,
