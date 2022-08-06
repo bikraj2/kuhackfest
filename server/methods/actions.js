@@ -8,6 +8,7 @@ const fs = require("fs");
 
 var functions = {
     authenticate:function(req,res){
+        console.log(req.body)
         buyer.findOne({
             username:req.body.username
         },function(err,user){

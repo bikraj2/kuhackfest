@@ -1,12 +1,14 @@
 // ignore_for_file: deprecated_member_use
 
+import 'dart:typed_data';
+
 import 'package:flutter/material.dart';
+import 'package:pixel/screens/authservices.dart';
 import 'package:pixel/screens/seller/s_login.dart';
 import 'package:pixel/screens/buyer/b_login.dart';
 
 class GetStartedScreen extends StatelessWidget {
   const GetStartedScreen({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

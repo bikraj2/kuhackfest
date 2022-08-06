@@ -5,7 +5,7 @@ const buyer= require('../models/user')
 const multer = require('multer')
 const fs = require('fs')
 
-router.get('/',async (req,res)=>{
+router.get('/image',async (req,res)=>{
     const allData = await buyer.find()
     res.json(allData)
 })
@@ -19,21 +19,16 @@ router.get('/',async (req,res)=>{
   });
   
   const upload = multer({ storage: storage });
-router.post('/register',upload.single("testImage"), function(req,res) {
+// 
+router.post('/register', function(req,res) {
   try{
       console.log(req.body)
       var newUser=buyer({
-          firstName:req.body.firstName,
-          middleName:req.body.middleName,
-          lastName:req.body.lastName,
+          fullName:req.body.fullName,
           email:req.body.email,
           phone:req.body.phone,
           username:req.body.username,
-          password:req.body.password,
-          image: {
-            data: fs.readFileSync("uploads/" + req.file.filename),
-            contentType: "image/png",
-          },})
+          password:req.body.password,})
       newUser.save((err,newUser)=>{
           if(err){
               res.json({success:false,msg:`failed to save ${err}`})

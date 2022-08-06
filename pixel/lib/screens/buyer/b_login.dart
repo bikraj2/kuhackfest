@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pixel/screens/authservices.dart';
 import 'package:pixel/screens/buyer/b_home_screen.dart';
 import 'package:pixel/screens/buyer/b_signup.dart';
 import 'package:pixel/screens/widgets/header_widget.dart';
@@ -16,6 +17,8 @@ class BLogin extends StatefulWidget {
 class _BLoginState extends State<BLogin> {
   final double _headerHeight = 250;
   final Key _formKey = GlobalKey<FormState>();
+  TextEditingController usernameController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,11 +41,13 @@ class _BLoginState extends State<BLogin> {
                     child: Column(
                       children: [
                         TextField(
+                          controller: usernameController,
                           decoration: ThemeHelper().textInputDecoration(
                               'UserName', 'Enter your username'),
                         ),
                         SizedBox(height: 10),
                         TextField(
+                          controller: passwordController,
                           obscureText: true,
                           decoration: ThemeHelper().textInputDecoration(
                               'Password', 'Enter your password'),
@@ -63,11 +68,21 @@ class _BLoginState extends State<BLogin> {
                             child: Text('Login'),
                           ),
                           onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const BHomeScreen()),
-                            );
+                            AuthService()
+                                .login(usernameController.text,
+                                    passwordController.text)
+                                .then((val) => {
+                                  if(val.data["success"]){
+                                    Navigator.push(
+                                                  context,
+                                                  MaterialPageRoute(
+                                                      builder: (context) =>
+                                                          BHomeScreen()))
+                                  }
+                                  else{
+                                    print("not done")
+                                  }
+                                });
                           },
                         )),
                         Container(
