@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:pixel/screens/authservices.dart';
+import 'package:pixel/screens/buyer/b_login.dart';
 import 'package:pixel/screens/widgets/header_widget.dart';
 import 'package:pixel/screens/widgets/theme_helper.dart';
 
@@ -11,6 +14,11 @@ class BSignup extends StatefulWidget {
 
 class _BSignupState extends State<BSignup> {
   final Key _formKey = GlobalKey<FormState>();
+  TextEditingController fullnameController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+  TextEditingController emailController = TextEditingController();
+  TextEditingController usernameController = TextEditingController();
+  TextEditingController phoneController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -58,14 +66,18 @@ class _BSignupState extends State<BSignup> {
                               //   ),
                               // ),
                             ])),
-                            Text('REGISTER',style: TextStyle(fontWeight: FontWeight.bold),),
+                            Text(
+                              'REGISTER',
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
                             SizedBox(
                               height: 10,
                             ),
                             Container(
                               child: TextFormField(
+                                controller: fullnameController,
                                 decoration: ThemeHelper().textInputDecoration(
-                                    'First Name', 'Enter your first name'),
+                                    'Full Name', 'Enter your full name'),
                               ),
                             ),
                             SizedBox(
@@ -73,24 +85,7 @@ class _BSignupState extends State<BSignup> {
                             ),
                             Container(
                               child: TextFormField(
-                                decoration: ThemeHelper().textInputDecoration(
-                                    'Middle Name', 'Enter your middle name'),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Container(
-                              child: TextFormField(
-                                decoration: ThemeHelper().textInputDecoration(
-                                    'Last Name', 'Enter your last name'),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Container(
-                              child: TextFormField(
+                                controller: emailController,
                                 decoration: ThemeHelper().textInputDecoration(
                                     'Email', 'Enter your email'),
                               ),
@@ -100,6 +95,7 @@ class _BSignupState extends State<BSignup> {
                             ),
                             Container(
                               child: TextFormField(
+                                controller: phoneController,
                                 decoration: ThemeHelper().textInputDecoration(
                                     'Phone', 'Enter your phone number'),
                               ),
@@ -109,6 +105,7 @@ class _BSignupState extends State<BSignup> {
                             ),
                             Container(
                               child: TextFormField(
+                                controller: usernameController,
                                 decoration: ThemeHelper().textInputDecoration(
                                     'User Name', 'Enter your user name'),
                               ),
@@ -118,6 +115,7 @@ class _BSignupState extends State<BSignup> {
                             ),
                             Container(
                               child: TextFormField(
+                                controller: passwordController,
                                 decoration: ThemeHelper().textInputDecoration(
                                     'Password', 'Enter your password'),
                               ),
@@ -125,17 +123,37 @@ class _BSignupState extends State<BSignup> {
                             SizedBox(
                               height: 10,
                             ),
-
                             Container(
-                              child: ElevatedButton(
-                                child: const Padding(
-                                  padding: EdgeInsets.fromLTRB(40, 10, 40, 10),
-                                  child: Text('Register'),
-                                ),
-                                onPressed: () {},
+                                child: ElevatedButton(
+                              child: const Padding(
+                                padding: EdgeInsets.fromLTRB(40, 10, 40, 10),
+                                child: Text('Register'),
+                              ),
+                              onPressed: () {
+                                print("i am, here");
+                                AuthService()
+                                    .addUser(
+                                        fullnameController.text,
+                                        emailController.text,
+                                        phoneController.text,
+                                        usernameController.text,
+                                        passwordController.text)
+                                    .then((val) => {
+                                          if (val.data['success'])
+                                            {
+                                              Navigator.push(
+                                                  context,
+                                                  MaterialPageRoute(
+                                                      builder: (context) =>
+                                                          BLogin()))
+                                            }
+                                          else
+                                            {
+                                              print(val.data.msg)
+                                            }
+                                        });
+                              },
                             )),
-                            
-
                           ],
                         ))
                   ],
