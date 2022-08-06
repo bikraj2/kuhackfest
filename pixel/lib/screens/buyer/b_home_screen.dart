@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:pixel/screens/buyer/maps.dart';
 import 'package:pixel/screens/get_started_screen.dart';
 import 'package:circle_nav_bar/circle_nav_bar.dart';
+import "maps.dart"; 
 
 void main() {
   runApp(const MaterialApp(
@@ -39,14 +41,7 @@ class _BHomeScreenState extends State<BHomeScreen> {
           )
         ],
       ),
-      body: ElevatedButton(
-          onPressed: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const GetStartedScreen()));
-          },
-          child: const Text('back')),
+      body: MyHomePage(),
       drawer: Drawer(
           child: ListView(
         children: const [
