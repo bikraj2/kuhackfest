@@ -18,11 +18,11 @@ class _MyHomePageState extends State<MyHomePage> {
     Marker(
         markerId: MarkerId('1'),
         position: LatLng(27.700769, 85.300140),
-        infoWindow: InfoWindow(title: 'adress 1')),
+        infoWindow: InfoWindow(title: 'adress 0')),
     Marker(
         markerId: MarkerId('2'),
         position: LatLng(27.6221, 85.54281),
-        infoWindow: InfoWindow(title: 'adress 2')),
+        infoWindow: InfoWindow(title: 'adress 1')),
     Marker(
         markerId: MarkerId('3'),
         position: LatLng(27.541967, 85.334297),
@@ -38,9 +38,9 @@ class _MyHomePageState extends State<MyHomePage> {
         infoWindow: InfoWindow(title: 'adress 4')),
     
     Marker(
-        markerId: MarkerId('2'),
+        markerId: MarkerId('6'),
         position: LatLng(27.6221,85.54281),
-        infoWindow: InfoWindow(title: 'adress 5')),
+        infoWindow: InfoWindow(title: 'address 5')),
 
 
     
@@ -65,7 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: GoogleMap(
           initialCameraPosition: _kGooglePlex,
           mapType: MapType.normal,
-          zoomControlsEnabled: true,
+          zoomControlsEnabled: false,
           zoomGesturesEnabled: true,
           myLocationButtonEnabled: false,
           myLocationEnabled: true,
