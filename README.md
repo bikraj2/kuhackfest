@@ -39,9 +39,28 @@
 ### :camera: Screenshots
 
 <div align="center"> 
-  <img src="https://placehold.co/600x400?text=Your+Screenshot+here" alt="screenshot" />
+  <img src="https://github.com/bikraj2/kuhackfest/blob/ishan/pixel/assets/images/nearyou.png" alt="screenshot" />
 </div>
-
+<div align="center"> 
+  <img src="" alt="screenshot" />
+</div>
+<div align="center"> 
+  <img src="https://github.com/bikraj2/kuhackfest/blob/ishan/pixel/assets/images/nearyou.png" alt="screenshot"  />
+</div>
+  
+<div align="center"> 
+  <img src="https://github.com/bikraj2/kuhackfest/blob/ishan/pixel/assets/images/inventory.png" />
+</div>
+  
+ <div align="center"> 
+  <img src="https://github.com/bikraj2/kuhackfest/blob/ishan/pixel/assets/images/iPhone%208%20-%209.png" alt="screenshot" />
+</div>
+ <div align="center"> 
+  <img src="https://github.com/bikraj2/kuhackfest/blob/ishan/pixel/assets/images/iPhone%208%20-%209.png" alt="screenshot" />
+</div>
+ <div align="center"> 
+  <img src="https://github.com/bikraj2/kuhackfest/blob/ishan/pixel/assets/images/iPhone%208%20-%2017.png" alt="screenshot" />
+</div>
 
 
 ### :space_invader: Tech Stack
@@ -93,10 +112,9 @@
 
 | Color             | Hex                                                                |
 | ----------------- | ------------------------------------------------------------------ |
-| Primary Color | ![#222831](https://via.placeholder.com/10/222831?text=+) #222831 |
-| Secondary Color | ![#393E46](https://via.placeholder.com/10/393E46?text=+) #393E46 |
-| Accent Color | ![#00ADB5](https://via.placeholder.com/10/00ADB5?text=+) #00ADB5 |
-| Text Color | ![#EEEEEE](https://via.placeholder.com/10/EEEEEE?text=+) #EEEEEE |
+| Primary Color | orange |
+| Secondary Color | white |
+
 
 
 
