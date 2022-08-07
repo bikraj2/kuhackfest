@@ -82,8 +82,8 @@ class _SCustomersState extends State<SCustomers> {
                         children: [
                           Column(
                             children: const [
-                              Text('Priyanshu Sharma'),
-                              Text('Dhapasi'),
+                              Text('Sadikshya Pokharel'),
+                              Text('Baneshwor'),
                               Text('*****'),
                             ],
                           ),
@@ -107,7 +107,7 @@ class _SCustomersState extends State<SCustomers> {
                         children: [
                           Column(
                             children: const [
-                              Text('Priyanshu Sharma'),
+                              Text('Ishan Panta'),
                               Text('Dhapasi'),
                               Text('*****'),
                             ],
@@ -133,7 +133,7 @@ class _SCustomersState extends State<SCustomers> {
                         children: [
                           Column(
                             children: const [
-                              Text('Priyanshu Sharma'),
+                              Text('Bikraj Shrestha'),
                               Text('Dhapasi'),
                               Text('*****'),
                             ],
@@ -158,8 +158,8 @@ class _SCustomersState extends State<SCustomers> {
                         children: [
                           Column(
                             children: const [
-                              Text('Priyanshu Sharma'),
-                              Text('Dhapasi'),
+                              Text('Hackfest'),
+                              Text('KU'),
                               Text('*****'),
                             ],
                           ),

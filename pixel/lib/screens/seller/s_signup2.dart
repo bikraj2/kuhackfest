@@ -11,10 +11,7 @@ class SSignup2 extends StatefulWidget {
 
 class _SSignup2State extends State<SSignup2> {
   final Key _formKey = GlobalKey<FormState>();
-  var initialtype='Citizenship';
-  List <String> identitytype=[
-    'Citizenship','Passport','National ID card'
-  ];
+  
   
 
   @override
@@ -111,6 +108,17 @@ class _SSignup2State extends State<SSignup2> {
                             SizedBox(
                               height: 10,
                             ),
+                            Container(
+                              child: TextFormField(
+                                decoration: ThemeHelper().textInputDecoration(
+                                    'DOB', 'Enter your date of birth'),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                           
+
                            
 
                             Container(
