@@ -44,9 +44,7 @@
 <div align="center"> 
   <img src="" alt="screenshot" />
 </div>
-<div align="center"> 
-  <img src="https://github.com/bikraj2/kuhackfest/blob/ishan/pixel/assets/images/nearyou.png" alt="screenshot"  />
-</div>
+
   
 <div align="center"> 
   <img src="https://github.com/bikraj2/kuhackfest/blob/ishan/pixel/assets/images/inventory.png" />
@@ -55,9 +53,7 @@
  <div align="center"> 
   <img src="https://github.com/bikraj2/kuhackfest/blob/ishan/pixel/assets/images/iPhone%208%20-%209.png" alt="screenshot" />
 </div>
- <div align="center"> 
-  <img src="https://github.com/bikraj2/kuhackfest/blob/ishan/pixel/assets/images/iPhone%208%20-%209.png" alt="screenshot" />
-</div>
+ 
  <div align="center"> 
   <img src="https://github.com/bikraj2/kuhackfest/blob/ishan/pixel/assets/images/iPhone%208%20-%2017.png" alt="screenshot" />
 </div>
@@ -110,7 +106,7 @@
 <!-- Color Reference -->
 ### :art: Color Reference
 
-| Color             | Hex                                                                |
+| Type              | Name                                                               |
 | ----------------- | ------------------------------------------------------------------ |
 | Primary Color | orange |
 | Secondary Color | white |
