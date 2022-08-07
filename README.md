@@ -7,7 +7,7 @@
   <p>
     Natural Food, Healthy Food  
   </p>
-  
+  </div>
   
    
 <h4>
