@@ -24,19 +24,18 @@
   * [Features](#dart-features)
   
   
+  
 - [Usage](#eyes-usage)
-- [Roadmap](#compass-roadmap)
-- 
-- 
+- [Roadmap](#compass-roadmap) 
 - [Acknowledgements](#gem-acknowledgements)
 
   
 
-<!-- About the Project -->
+
 ## :star2: About the Project
 
 
-<!-- Screenshots -->
+
 ### :camera: Screenshots
 
 <div align="center"> 
@@ -44,7 +43,7 @@
 </div>
 
 
-<!-- TechStack -->
+
 ### :space_invader: Tech Stack
 
 <details>
