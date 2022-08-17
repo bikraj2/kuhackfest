@@ -85,7 +85,7 @@
 <summary>Database</summary>
   <ul>
     
-    <li><a href="https://www.mongodb.com/">MongoDB</a></li>
+    <a href="https://www.mongodb.com/">MongoDB</a>
   </ul>
 </details>
 
